@@ -3,89 +3,39 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/Button';
 
 const features = [
-  {
-    icon: '🚚',
-    title: 'Free Shipping',
-    description: 'On orders over $100',
-  },
-  {
-    icon: '🔒',
-    title: 'Secure Checkout',
-    description: 'SSL encrypted payments',
-  },
-  {
-    icon: '↩️',
-    title: '30-Day Returns',
-    description: 'Hassle-free returns',
-  },
-  {
-    icon: '💬',
-    title: '24/7 Support',
-    description: 'Dedicated customer service',
-  },
+  { icon: '🍽️', title: 'Fresh Ingredients', description: 'Locally sourced produce daily' },
+  { icon: '⏰', title: 'Open Late', description: 'Serving dinner until 11 PM' },
+  { icon: '🥗', title: 'Diet Friendly', description: 'Vegan & gluten-free options' },
+  { icon: '📅', title: 'Easy Booking', description: 'Reserve your table in minutes' },
 ];
 
 export const HeroBanner: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900">
-      {/* Background Pattern */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-amber-950 via-neutral-900 to-neutral-950">
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full mix-blend-multiply filter blur-3xl"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-neutral-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
-        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-neutral-600 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-amber-300 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-rose-300 rounded-full mix-blend-multiply filter blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-orange-400 rounded-full mix-blend-multiply filter blur-3xl"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white font-display mb-6 leading-tight">
-            Elevate Your
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-neutral-300 to-white">
-              Street Style
-            </span>
-          </h1>
-        </motion.div>
+        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-5xl md:text-7xl lg:text-8xl font-bold text-white font-display mb-6 leading-tight">
+          Welcome to <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-orange-300 to-amber-200">Restorent</span>
+        </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg md:text-xl text-neutral-300 mb-8 max-w-3xl mx-auto"
-        >
-          Discover premium streetwear pieces that define modern culture. From exclusive drops to timeless essentials.
+        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-lg md:text-xl text-neutral-300 mb-8 max-w-3xl mx-auto">
+          A modern neighborhood restaurant with chef-crafted plates, handcrafted cocktails, and a warm dining experience.
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
-        >
-          <Button size="lg" className="bg-white text-neutral-900 hover:bg-neutral-100">
-            Shop Now
-          </Button>
-          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-            Explore Collections
-          </Button>
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <Button size="lg" className="bg-white text-neutral-900 hover:bg-neutral-100">Book a Table</Button>
+          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">View Menu</Button>
         </motion.div>
 
-        {/* Features */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-12 border-t border-white/10"
-        >
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ y: -4 }}
-              className="text-center"
-            >
+        <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-12 border-t border-white/10">
+          {features.map((feature) => (
+            <motion.div key={feature.title} whileHover={{ y: -4 }} className="text-center">
               <p className="text-3xl mb-3">{feature.icon}</p>
               <h3 className="text-white font-bold mb-1">{feature.title}</h3>
               <p className="text-neutral-400 text-sm">{feature.description}</p>
@@ -93,22 +43,6 @@ export const HeroBanner: React.FC = () => {
           ))}
         </motion.div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <div className="text-white/50 text-center text-sm">Scroll to explore</div>
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full mt-2 flex justify-center">
-          <motion.div
-            animate={{ y: [0, 6, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-1 h-2 bg-white/50 rounded-full mt-2"
-          />
-        </div>
-      </motion.div>
     </section>
   );
 };

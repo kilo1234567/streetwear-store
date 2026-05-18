@@ -22,9 +22,9 @@ const Home: NextPage = () => {
           viewport={{ once: true }}
           className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-neutral-900 to-neutral-800 text-white p-8 md:p-16 text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold font-display mb-4">Join Our Community</h2>
+          <h2 className="text-4xl md:text-5xl font-bold font-display mb-4">Reserve Your Next Meal</h2>
           <p className="text-neutral-300 max-w-2xl mx-auto mb-8 text-lg">
-            Get early access to drops, exclusive discounts, and style inspiration delivered to your inbox.
+            Be first to hear about tasting nights, chef specials, and holiday reservations.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
               className="flex-1 px-4 py-3 rounded-lg bg-white text-neutral-900 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-white"
             />
             <button className="px-6 py-3 bg-white text-neutral-900 font-bold rounded-lg hover:bg-neutral-100 transition-colors whitespace-nowrap">
-              Subscribe
+              Reserve Updates
             </button>
           </div>
         </motion.div>

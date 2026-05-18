@@ -5,7 +5,7 @@ import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
 import { FaTwitter, FaInstagram, FaFacebook, FaLinkedin } from 'react-icons/fa';
 
 const footerLinks = {
-  'Shop': ['/shop', '/about', '/contact'],
+  'Menu': ['/shop', '/about', '/contact'],
   'Customer Service': ['/faq', '/shipping', '/returns', '/support'],
   'Company': ['/about', '/careers', '/press', '/sustainability'],
   'Legal': ['/privacy', '/terms', '/cookies', '/accessibility'],
@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
           <div>
             <h3 className="text-2xl font-bold font-display mb-4">Stay Updated</h3>
             <p className="text-neutral-400 mb-6">
-              Subscribe to our newsletter for exclusive drops, style tips, and early access to new collections.
+              Subscribe for weekly specials, seasonal tasting menus, and chef events.
             </p>
           </div>
           <div className="flex flex-col gap-3">
@@ -53,9 +53,9 @@ export const Footer: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl font-bold font-display mb-4">streetwear</h2>
+            <h2 className="text-2xl font-bold font-display mb-4">Restorent</h2>
             <p className="text-neutral-400 text-sm mb-6">
-              Premium streetwear fashion for the modern individual. Quality. Style. Culture.
+              A cozy neighborhood restaurant serving seasonal plates, craft drinks, and warm hospitality.
             </p>
             <div className="flex gap-4">
               {[
@@ -114,13 +114,13 @@ export const Footer: React.FC = () => {
                 <FiPhone size={16} />
                 +1 (234) 567-890
               </a>
-              <a href="mailto:info@streetwear.com" className="flex items-center gap-2 hover:text-white transition-colors">
+              <a href="mailto:hello@restorent.com" className="flex items-center gap-2 hover:text-white transition-colors">
                 <FiMail size={16} />
-                info@streetwear.com
+                hello@restorent.com
               </a>
               <div className="flex items-center gap-2">
                 <FiMapPin size={16} />
-                <span>123 Fashion St, NY 10001</span>
+                <span>245 Market Street, New York, NY 10012</span>
               </div>
             </div>
           </motion.div>
@@ -128,7 +128,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom */}
         <div className="border-t border-neutral-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-neutral-500 text-sm">
-          <p>&copy; 2026 Streetwear Store. All rights reserved.</p>
+          <p>&copy; 2026 Restorent. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>

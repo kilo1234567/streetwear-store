@@ -9,9 +9,9 @@ import { clsx } from 'clsx';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Shop', href: '/shop' },
+  { name: 'Menu', href: '/shop' },
   { name: 'About', href: '/about' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Reservations', href: '/contact' },
 ];
 
 export const Header: React.FC = () => {
@@ -30,7 +30,7 @@ export const Header: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               className="text-2xl font-bold text-neutral-900 dark:text-white font-display"
             >
-               streetwear
+               Restorent
             </motion.div>
           </Link>
 
@@ -122,7 +122,7 @@ export const Header: React.FC = () => {
           >
             <input
               type="text"
-              placeholder="Search products, brands, styles..."
+              placeholder="Search dishes, cuisines, specials..."
               className="w-full px-4 py-3 border border-neutral-200 dark:border-neutral-700 rounded-lg bg-white dark:bg-neutral-800 text-neutral-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-neutral-900 dark:focus:ring-white"
               autoFocus
             />
